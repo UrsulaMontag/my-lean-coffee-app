@@ -27,14 +27,4 @@ export default function Header() {
       </Container>
     </AppBar>
   );
-
-  return (
-    <header>
-      <Link href="/">Home</Link>
-      <br />
-      <Link href="/cards">Cards</Link>
-      <br />
-      <Link href="/create">Create</Link>
-    </header>
-  );
 }
