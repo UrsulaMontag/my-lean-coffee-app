@@ -8,9 +8,9 @@ export default function CardCreateForm() {
   const submit = async (event) => {
     event.preventDefault();
 
-    console.log(id, nameValue, contentValue);
+    console.log(nameValue, contentValue);
 
-    const response = await fetch("/api/create/" + id, {
+    const response = await fetch("/api/card/create/", {
       method: "POST",
       body: JSON.stringify({
         content: contentValue,
