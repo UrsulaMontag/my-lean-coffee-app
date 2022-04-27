@@ -1,9 +1,11 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function CardCreateForm() {
   const [nameValue, setNameValue] = useState("");
   const [contentValue, setContentValue] = useState("");
+  const router = useRouter();
 
   const submit = async (event) => {
     event.preventDefault();
@@ -17,6 +19,9 @@ export default function CardCreateForm() {
         name: nameValue,
       }),
     });
+    console.log(await response.json());
+
+    router.push("/cards");
   };
 
   return (
